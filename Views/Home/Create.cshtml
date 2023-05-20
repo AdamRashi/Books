@@ -1,0 +1,22 @@
+﻿@model Book
+
+<h4>Book</h4>
+<div class="edit-block">
+	@using (Html.BeginForm("Create", "Home"))
+	{
+		<div class="dataBox">
+			<label>Название книги</label><br />
+			@Html.TextBoxFor(m => m.Title, new { @class = "text-box" })
+		</div>
+		<div class="dataBox">
+			<label>Год основания</label><br />
+			@Html.TextBoxFor(m => m.Year, "2023", new { type = "number", @class ="text-box" })
+		</div>
+		<div class="dataBox">
+			<input type="submit" value="Сохранить" />
+		</div>
+	}
+</div>
+<div>
+	<a asp-action="Index">Back to List</a>
+</div>
